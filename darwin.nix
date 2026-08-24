@@ -35,4 +35,19 @@
   };
 
   system.stateVersion = 4;
+
+  homebrew = {
+    enable = true;
+
+    onActivation = {
+      cleanup = "zap";
+    };
+
+    casks = [
+      "google-chrome"
+    #   "raycast"
+    #   "orbstack"
+    #   "visual-studio-code"
+    ];
+  };
 }

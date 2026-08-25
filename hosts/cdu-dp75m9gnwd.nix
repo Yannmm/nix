@@ -5,6 +5,7 @@
 
   nix.enable = true;
 
+  # This matches the existing Nix installation on this Mac.
   ids.gids.nixbld = 350;
 
   nix.settings = {
@@ -39,15 +40,14 @@
   homebrew = {
     enable = true;
 
-    onActivation = {
-      cleanup = "zap";
-    };
+    # IMPORTANT while migrating an existing Mac.
+    onActivation.cleanup = "none";
 
     casks = [
       "google-chrome"
-    #   "raycast"
-    #   "orbstack"
-    #   "visual-studio-code"
+      # "raycast"
+      # "orbstack"
+      # "visual-studio-code"
     ];
   };
 }

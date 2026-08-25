@@ -6,9 +6,6 @@
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
 
-  home.username = "rayman";
-  home.homeDirectory = "/Users/rayman";
-
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
   # introduces backwards incompatible changes.
@@ -46,7 +43,6 @@
     eza
     htop
     wget
-    curl
     tree
   ];
 
@@ -54,8 +50,8 @@
     enable = true;
 
     settings = {
-      user.name = "Your Name";
-      user.email = "your@email.com";
+      user.name = "Rayman Yan";
+      user.email = "ryan@aligntech.com";
       init.defaultBranch = "main";
       pull.rebase = true;
       push.autoSetupRemote = true;
@@ -77,20 +73,19 @@
     '';
   };
 
-  # homebrew = {
-  #   enable = true;
+  programs.tmux = {
+    enable = true;
 
-  #   onActivation = {
-  #     cleanup = "zap";
-  #   };
+    # Optional configuration
+    mouse = true;
+    keyMode = "vi";
+    terminal = "screen-256color";
 
-  #   casks = [
-  #     "google-chrome"
-  #     # "raycast"
-  #     # "orbstack"
-  #     # "visual-studio-code"
-  #   ];
-  # };
+    extraConfig = ''
+      set -g status-interval 1
+      set -g history-limit 10000
+    '';
+  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.

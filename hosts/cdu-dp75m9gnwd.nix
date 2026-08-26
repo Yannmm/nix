@@ -24,6 +24,7 @@
 
   environment.systemPackages = [
     pkgs.vim
+    pkgs.aerospace
   ];
 
   programs.zsh.enable = true;

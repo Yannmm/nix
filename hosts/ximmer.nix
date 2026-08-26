@@ -5,9 +5,6 @@
 
   nix.enable = true;
 
-  # IMPORTANT:
-  # Verify this on Ximmer before using it:
-  # dscl . -read /Groups/nixbld PrimaryGroupID
   ids.gids.nixbld = 350;
 
   nix.settings = {
@@ -46,6 +43,8 @@
 
     casks = [
       # Put Ximmer-specific GUI apps here.
+      "google-chrome"
+      "orbstack"
     ];
   };
 }

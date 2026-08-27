@@ -17,6 +17,13 @@
         system = "aarch64-darwin";
 
         modules = [
+          {
+            nixpkgs.config.allowUnfreePredicate = pkg:
+              builtins.elem (nixpkgs.lib.getName pkg) [
+                "claude-code"
+              ];
+          }
+
           ./hosts/cdu-dp75m9gnwd.nix
 
           home-manager.darwinModules.home-manager

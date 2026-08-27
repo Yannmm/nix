@@ -50,6 +50,7 @@
     htop
     wget
     tree
+    claude-code
   ];
 
   programs.git = {

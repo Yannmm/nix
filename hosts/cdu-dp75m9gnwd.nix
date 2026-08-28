@@ -51,7 +51,7 @@
     casks = [
       "google-chrome"
       # "raycast"
-      # "orbstack"
+      "orbstack"
       # "visual-studio-code"
     ];
   };

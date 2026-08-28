@@ -2,7 +2,6 @@
 
 {
   imports = [
-    ../modules/opencode.nix
   ];
 
   system.primaryUser = "yannmm";

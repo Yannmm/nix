@@ -2,8 +2,7 @@
 
 {
   imports = [
-    ../modules/claude-code.nix
-    ../modules/aerospace.nix
+    
   ];
 
   system.primaryUser = "rayman";

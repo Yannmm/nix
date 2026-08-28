@@ -32,7 +32,14 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.rayman = import ./home.nix;
+            home-manager.users.rayman = {
+              imports = [
+                ./home.nix
+                ./modules/aerospace.nix
+                ./modules/claude-code.nix
+                ./modules/opencode.nix
+              ];
+            };
           }
         ];
       };
@@ -49,7 +56,13 @@
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
 
-            home-manager.users.yannmm = import ./home.nix;
+            # home-manager.users.yannmm = import ./home.nix;
+            home-manager.users.yannmm = {
+              imports = [
+                ./home.nix
+                ./modules/opencode.nix
+              ];
+            };
           }
         ];
       };

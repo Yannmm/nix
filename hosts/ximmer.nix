@@ -1,6 +1,10 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ../modules/opencode.nix
+  ];
+
   system.primaryUser = "yannmm";
 
   nix.enable = true;

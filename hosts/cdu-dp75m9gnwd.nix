@@ -1,6 +1,11 @@
 { pkgs, ... }:
 
 {
+  imports = [
+    ../modules/claude-code.nix
+    ../modules/aerospace.nix
+  ];
+
   system.primaryUser = "rayman";
 
   nix.enable = true;
@@ -24,7 +29,7 @@
 
   environment.systemPackages = [
     pkgs.vim
-    pkgs.aerospace
+    # pkgs.aerospace
   ];
 
   programs.zsh.enable = true;

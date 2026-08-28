@@ -44,6 +44,7 @@
     htop
     wget
     tree
+    nodejs
   ];
 
   programs.git = {

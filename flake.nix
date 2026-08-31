@@ -17,6 +17,8 @@
         system = "aarch64-darwin";
 
         modules = [
+          ./modules/aerospace.nix
+
           {
             nixpkgs.config.allowUnfreePredicate = pkg:
               builtins.elem (nixpkgs.lib.getName pkg) [
@@ -35,7 +37,6 @@
             home-manager.users.rayman = {
               imports = [
                 ./home.nix
-                ./modules/aerospace.nix
                 ./modules/claude-code.nix
                 ./modules/opencode.nix
               ];

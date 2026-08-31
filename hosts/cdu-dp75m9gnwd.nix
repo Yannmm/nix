@@ -52,7 +52,6 @@
       "google-chrome"
       # "raycast"
       "orbstack"
-      # "visual-studio-code"
     ];
   };
 }

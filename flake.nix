@@ -23,6 +23,7 @@
         modules = [
           ./hosts/cdu-dp75m9gnwd.nix
           ./modules/aerospace.nix
+          
           home-manager.darwinModules.home-manager
           {
             nixpkgs.config.allowUnfree = true;
@@ -46,7 +47,6 @@
               imports = [
                 ./home.nix
                 ./modules/claude-code.nix
-                ./modules/opencode.nix
                 ./modules/vscode.nix
               ];
             };
@@ -62,16 +62,28 @@
           ./modules/aerospace.nix
 
           home-manager.darwinModules.home-manager
+          {
+            nixpkgs.config.allowUnfree = true;
 
+            nixpkgs.overlays = [
+              nix-vscode-extensions.overlays.default
+            ];
+          }
+          mac-app-util.darwinModules.default
+          
           {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-
-            # home-manager.users.yannmm = import ./home.nix;
+            home-manager.backupFileExtension = "hm-backup";
+            
+            home-manager.sharedModules = [
+              mac-app-util.homeManagerModules.default
+            ];
+            
             home-manager.users.yannmm = {
               imports = [
                 ./home.nix
-                ./modules/opencode.nix
+                ./modules/vscode.nix
               ];
             };
           }

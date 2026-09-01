@@ -13,14 +13,17 @@
         "git"
         "z"
         "macos"
-        "nix-zsh-completions"
       ];
     };
 
     plugins = [
       {
         name = "zsh-autosuggestions";
-        src = pkgs.zsh-autosuggestions;
+        src = "${pkgs.zsh-autosuggestions}/share/zsh-autosuggestions";
+      }
+      {
+        name = "zsh-history-substring-search";
+        src = "${pkgs.zsh-history-substring-search}/share/zsh/plugins/zsh-history-substring-search";
       }
     ];
 
@@ -38,9 +41,6 @@
     initContent = ''
       # Gemini CLI
       export GOOGLE_CLOUD_PROJECT="gen-lang-client-0567175526"
-
-      # Nix shell prompt
-      prompt_nix_shell_setup
     '';
   };
 

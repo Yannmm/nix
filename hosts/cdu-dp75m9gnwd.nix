@@ -28,16 +28,16 @@
 
   environment.systemPackages = [
     pkgs.vim
-    # pkgs.aerospace
   ];
 
-  programs.zsh.enable = true;
-
   nixpkgs.hostPlatform = "aarch64-darwin";
+
+  environment.shells = [ pkgs.zsh ];
 
   users.users.rayman = {
     name = "rayman";
     home = "/Users/rayman";
+    shell = pkgs.zsh;
   };
 
   system.stateVersion = 4;

@@ -28,13 +28,14 @@
     pkgs.vim
   ];
 
-  programs.zsh.enable = true;
-
   nixpkgs.hostPlatform = "aarch64-darwin";
+
+  environment.shells = [ pkgs.zsh ];
 
   users.users.yannmm = {
     name = "yannmm";
     home = "/Users/yannmm";
+    shell = pkgs.zsh;
   };
 
   system.stateVersion = 4;

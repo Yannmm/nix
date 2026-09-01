@@ -27,7 +27,7 @@
     ];
 
     profiles.default.userSettings = {
-      "extensions.autoUpdate" = false;
+      "extensions.autoUpdate" = "off";
       "extensions.autoCheckUpdates" = false;
       "editor.wordWrap" = "on";
       "dart.debugSdkLibraries" = false;
@@ -131,10 +131,6 @@
         "ruby" = true;
       };
       "rubocop.mode" = "onlyRunGlobally";
-      "superdesign.aiModel" = "us.anthropic.claude-sonnet-4-5-20250929-v1:0";
-      "superdesign.aiModelProvider" = "openai";
-      "superdesign.openaiApiKey" = "ganzhongxue";
-      "superdesign.openaiUrl" = "http://172.21.8.69:8086/v1";
       "chat.mcp.gallery.enabled" = true;
       "chat.viewSessions.orientation" = "stacked";
       "claudeCode.preferredLocation" = "panel";

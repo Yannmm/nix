@@ -27,6 +27,8 @@
     ];
 
     profiles.default.userSettings = {
+      "extensions.autoUpdate" = false;
+      "extensions.autoCheckUpdates" = false;
       "editor.wordWrap" = "on";
       "dart.debugSdkLibraries" = false;
       "explorer.confirmDelete" = false;

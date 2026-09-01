@@ -3,6 +3,12 @@
 { config, pkgs, ... }:
 
 {
+  imports = [
+    ./modules/zsh.nix
+    ./modules/git.nix
+  ];
+
+
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
 
@@ -46,33 +52,6 @@
     tree
     nodejs
   ];
-
-  programs.git = {
-    enable = true;
-
-    settings = {
-      user.name = "Rayman Yan";
-      user.email = "ryan@aligntech.com";
-      init.defaultBranch = "main";
-      pull.rebase = true;
-      push.autoSetupRemote = true;
-    };
-  };
-
-  programs.zsh = {
-    enable = true;
-
-    shellAliases = {
-      ll = "eza -lah";
-      la = "eza -a";
-      cat = "bat";
-      grep = "rg";
-    };
-
-    initContent = ''
-      export EDITOR=vim
-    '';
-  };
 
   programs.tmux = {
     enable = true;

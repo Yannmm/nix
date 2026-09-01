@@ -21,10 +21,9 @@
         system = "aarch64-darwin";
 
         modules = [
-          mac-app-util.darwinModules.default
-
+          ./hosts/cdu-dp75m9gnwd.nix
           ./modules/aerospace.nix
-
+          home-manager.darwinModules.home-manager
           {
             nixpkgs.config.allowUnfree = true;
 
@@ -32,10 +31,7 @@
               nix-vscode-extensions.overlays.default
             ];
           }
-
-          ./hosts/cdu-dp75m9gnwd.nix
-
-          home-manager.darwinModules.home-manager
+          mac-app-util.darwinModules.default
 
           {
             home-manager.useGlobalPkgs = true;

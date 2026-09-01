@@ -6,6 +6,7 @@
   imports = [
     ./modules/zsh.nix
     ./modules/git.nix
+    ./modules/tmux.nix
   ];
 
 
@@ -52,20 +53,6 @@
     tree
     nodejs
   ];
-
-  programs.tmux = {
-    enable = true;
-
-    # Optional configuration
-    mouse = true;
-    keyMode = "vi";
-    terminal = "screen-256color";
-
-    extraConfig = ''
-      set -g status-interval 1
-      set -g history-limit 10000
-    '';
-  };
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.

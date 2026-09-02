@@ -47,6 +47,7 @@
               imports = [
                 ./home.nix
                 ./modules/claude-code.nix
+                ./modules/opencode.nix
                 ./modules/vscode.nix
               ];
             };

@@ -28,6 +28,7 @@
 
   environment.systemPackages = [
     pkgs.vim
+    pkgs.lcov
   ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";

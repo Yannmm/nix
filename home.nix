@@ -7,6 +7,7 @@
     ./modules/zsh.nix
     ./modules/git.nix
     ./modules/tmux.nix
+    ./modules/nodejs.nix
   ];
 
 
@@ -51,7 +52,6 @@
     htop
     wget
     tree
-    nodejs
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

@@ -49,6 +49,8 @@
       # Put Ximmer-specific GUI apps here.
       "google-chrome"
       "orbstack"
+      "maccy"
+      "gitup-app"
     ];
   };
 }

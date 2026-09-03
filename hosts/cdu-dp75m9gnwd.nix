@@ -53,6 +53,8 @@
       "google-chrome"
       # "raycast"
       "orbstack"
+      "maccy"
+      "gitup-app"
     ];
   };
 }

@@ -52,6 +52,7 @@
     htop
     wget
     tree
+    gh
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

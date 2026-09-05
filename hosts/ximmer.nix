@@ -52,5 +52,9 @@
       "maccy"
       "gitup-app"
     ];
+
+    brews = [
+      "create-dmg"
+    ];
   };
 }

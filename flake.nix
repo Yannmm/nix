@@ -61,6 +61,7 @@
         modules = [
           ./hosts/ximmer.nix
           ./modules/aerospace.nix
+          ./modules/macos.nix
 
           home-manager.darwinModules.home-manager
           {

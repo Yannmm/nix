@@ -26,6 +26,7 @@
 
   environment.systemPackages = [
     pkgs.vim
+    pkgs.wrangler
   ];
 
   nixpkgs.hostPlatform = "aarch64-darwin";
@@ -51,6 +52,7 @@
       "orbstack"
       "maccy"
       "gitup-app"
+      "dbeaver-community"
     ];
 
     brews = [

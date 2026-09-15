@@ -53,10 +53,16 @@
       "maccy"
       "gitup-app"
       "dbeaver-community"
+      "tencent-lemon"
     ];
 
     brews = [
       "create-dmg"
+      "mas"
     ];
+
+    masApps = {
+      Xcode = 497799835;
+    };
   };
 }

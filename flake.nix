@@ -13,16 +13,31 @@
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
 
     mac-app-util.url = "github:hraban/mac-app-util";
+
+    android-nixpkgs.url = "github:tadfisher/android-nixpkgs";
   };
 
-  outputs = inputs@{ nixpkgs, darwin, home-manager, nix-vscode-extensions, mac-app-util, ... }: {
+  outputs = inputs@{ 
+    nixpkgs, 
+    darwin, 
+    home-manager, 
+    nix-vscode-extensions, 
+    mac-app-util, 
+    android-nixpkgs,
+    ...
+  }: {
     darwinConfigurations = {
       "CDU-DP75M9GNWD" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
 
+        specialArgs = {
+          inherit inputs;
+        };
+
         modules = [
           ./hosts/cdu-dp75m9gnwd.nix
           ./modules/aerospace.nix
+          ./modules/android.nix
           
           home-manager.darwinModules.home-manager
           {

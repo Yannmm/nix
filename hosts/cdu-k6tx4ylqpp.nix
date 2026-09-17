@@ -2,12 +2,14 @@
 
 {
   imports = [
+    
   ];
 
-  system.primaryUser = "yannmm";
+  system.primaryUser = "ryan";
 
   nix.enable = true;
 
+  # This matches the existing Nix installation on this Mac.
   ids.gids.nixbld = 350;
 
   nix.settings = {
@@ -20,12 +22,13 @@
 
     trusted-users = [
       "root"
-      "yannmm"
+      "ryan"
     ];
   };
 
   environment.systemPackages = [
     pkgs.vim
+    pkgs.lcov
     pkgs.wrangler
   ];
 
@@ -33,9 +36,9 @@
 
   environment.shells = [ pkgs.zsh ];
 
-  users.users.yannmm = {
-    name = "yannmm";
-    home = "/Users/yannmm";
+  users.users.ryan = {
+    name = "ryan";
+    home = "/Users/ryan";
     shell = pkgs.zsh;
   };
 
@@ -44,11 +47,12 @@
   homebrew = {
     enable = true;
 
+    # IMPORTANT while migrating an existing Mac.
     onActivation.cleanup = "zap";
 
     casks = [
-      # Put Ximmer-specific GUI apps here.
       "google-chrome"
+      # "raycast"
       "orbstack"
       "maccy"
       "gitup-app"
@@ -57,7 +61,6 @@
     ];
 
     brews = [
-      "create-dmg"
       "mas"
     ];
 

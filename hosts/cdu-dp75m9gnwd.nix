@@ -48,7 +48,7 @@
     enable = true;
 
     # IMPORTANT while migrating an existing Mac.
-    onActivation.cleanup = "none";
+    onActivation.cleanup = "zap";
 
     casks = [
       "google-chrome"

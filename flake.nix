@@ -70,6 +70,50 @@
         ];
       };
 
+      "CDU-K6TX4YLQPP" = darwin.lib.darwinSystem {
+        system = "aarch64-darwin";
+
+        specialArgs = {
+          inherit inputs;
+        };
+
+        modules = [
+          ./hosts/cdu-k6tx4ylqpp.nix
+          ./modules/aerospace.nix
+          ./modules/android.nix
+          ./modules/macos.nix
+          
+          home-manager.darwinModules.home-manager
+          {
+            nixpkgs.config.allowUnfree = true;
+
+            nixpkgs.overlays = [
+              nix-vscode-extensions.overlays.default
+            ];
+          }
+          mac-app-util.darwinModules.default
+
+          {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "hm-backup";
+
+            home-manager.sharedModules = [
+              mac-app-util.homeManagerModules.default
+            ];
+
+            home-manager.users.ryan = {
+              imports = [
+                ./home.nix
+                ./modules/claude-code.nix
+                ./modules/opencode.nix
+                ./modules/vscode.nix
+              ];
+            };
+          }
+        ];
+      };
+
       "Ximmer" = darwin.lib.darwinSystem {
         system = "aarch64-darwin";
 

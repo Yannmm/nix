@@ -58,6 +58,7 @@
       "gitup-app"
       "dbeaver-community"
       "tencent-lemon"
+      "grandperspective"
     ];
 
     brews = [

@@ -8,7 +8,6 @@
       aliariff.vscode-erb-beautify
       anthropic.claude-code
       bbenoist.nix
-      castwide.solargraph
       codemos.codemos-modern
       dart-code.dart-code
       dart-code.flutter
@@ -24,6 +23,7 @@
       oderwat.indent-rainbow
       pejmannikram.vscode-auto-scroll
       ritwickdey.liveserver
+      ms-vscode-remote.remote-containers
     ];
 
     profiles.default.userSettings = {

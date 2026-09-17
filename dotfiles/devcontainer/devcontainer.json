@@ -1,0 +1,49 @@
+{
+  "name": "insight-service",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "app",
+  "workspaceFolder": "/workspaces/insight-service",
+  "features": {
+    "ghcr.io/devcontainers/features/ruby:1": {
+      "version": "3.4.7"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "lts"
+    },
+    "ghcr.io/devcontainers/features/git:1": {}
+  },
+  "forwardPorts": [
+    3000,
+    5432,
+    6379
+  ],
+  "portsAttributes": {
+    "3000": {
+      "label": "Rails"
+    },
+    "5432": {
+      "label": "PostgreSQL"
+    },
+    "6379": {
+      "label": "Redis"
+    }
+  },
+  "postCreateCommand": "bundle install && bin/rails db:prepare",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "Shopify.ruby-lsp",
+        "lorankloeze.ruby-rubocop-revived",
+        "bung87.rails"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "Shopify.ruby-lsp",
+        "rubyLsp.rubyVersionManager": {
+          "identifier": "none"
+        }
+      }
+    }
+  },
+  "remoteUser": "vscode"
+}

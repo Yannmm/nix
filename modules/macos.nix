@@ -19,6 +19,17 @@
       "com.apple.trackpad.scaling" = 1.2;
     };
 
+    CustomUserPreferences = {
+      NSGlobalDomain = {
+        AppleLanguages = [
+          "en-US"
+          "zh-Hans"
+        ];
+
+        AppleLocale = "en_US";
+      };
+    };
+
     trackpad = {
       # Point & Click
       Clicking = true;
@@ -54,6 +65,9 @@
       showAppExposeGestureEnabled = false;
       showMissionControlGestureEnabled = false;
       showDesktopGestureEnabled = true;
+
+      wvous-bl-corner = 14; # Quick Note
+      wvous-br-corner = 11; # Launchpad
     };
 
     finder = {
@@ -67,35 +81,4 @@
       disable-shadow = true;
     };
   };
-
-  system.activationScripts.postActivation.text = ''
-    /usr/bin/defaults write com.apple.dock wvous-tl-corner -int 0
-    /usr/bin/defaults write com.apple.dock wvous-tl-modifier -int 0
-
-    /usr/bin/defaults write com.apple.dock wvous-tr-corner -int 0
-    /usr/bin/defaults write com.apple.dock wvous-tr-modifier -int 0
-
-    /usr/bin/defaults write com.apple.dock wvous-bl-corner -int 14
-    /usr/bin/defaults write com.apple.dock wvous-bl-modifier -int 0
-
-    /usr/bin/defaults write com.apple.dock wvous-br-corner -int 11
-    /usr/bin/defaults write com.apple.dock wvous-br-modifier -int 0
-
-    /usr/bin/killall Dock 2>/dev/null || true
-  '';
-
-  # Language / Region
-  system.activationScripts.languageAndRegion.text = ''
-    USER="${config.system.primaryUser}"
-
-    sudo -u "$USER" /usr/bin/defaults write -g AppleLanguages -array \
-      "en-US" \
-      "zh-Hans"
-
-    sudo -u "$USER" /usr/bin/defaults write -g AppleLocale \
-      "zh_CN@calendar=gregorian"
-
-    sudo -u "$USER" /usr/bin/defaults write -g AppleFirstWeekday -dict \
-      gregorian 1
-  '';
 }

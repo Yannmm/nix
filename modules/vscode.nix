@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ config, lib, pkgs, ... }:
 
 {
   programs.vscode = {
@@ -22,82 +22,11 @@
       pejmannikram.vscode-auto-scroll
       ms-vscode-remote.remote-containers
     ];
-
-    profiles.default.userSettings = {
-      "extensions.autoUpdate" = "off";
-      "extensions.autoCheckUpdates" = false;
-      "editor.wordWrap" = "on";
-      "dart.debugSdkLibraries" = false;
-      "explorer.confirmDelete" = false;
-      "dart.showInspectorNotificationsForWidgetErrors" = false;
-      "explorer.confirmDragAndDrop" = false;
-      "[dart]" = {
-        "editor.formatOnSave" = true;
-        "editor.rulers" = [80];
-        "editor.selectionHighlight" = false;
-        "editor.suggest.snippetsPreventQuickSuggestions" = false;
-        "editor.suggestSelection" = "first";
-        "editor.tabCompletion" = "onlySnippets";
-        "editor.wordBasedSuggestions" = "off";
-      };
-      "[javascript]" = {
-        "editor.formatOnSave" = true;
-      };
-      "[typescript]" = {
-        "editor.formatOnSave" = true;
-      };
-      "[css]" = {
-        "editor.formatOnSave" = true;
-        "editor.defaultFormatter" = "vscode.css-language-features";
-      };
-      "[html]" = {
-        "editor.formatOnSave" = true;
-        "editor.defaultFormatter" = "vscode.html-language-features";
-      };
-      "[art]" = {
-        "editor.formatOnSave" = true;
-      };
-      "[python]" = {
-        "editor.formatOnSave" = true;
-        "editor.formatOnType" = true;
-      };
-      "workbench.editor.enablePreview" = false;
-      "dart.debugExternalPackageLibraries" = true;
-      "files.associations" = {
-        "*.html.erb" = "erb";
-        "*.css" = "tailwindcss";
-      };
-      "editor.renderWhitespace" = "none";
-      "security.workspace.trust.untrustedFiles" = "open";
-      "liveServer.settings.donotVerifyTags" = true;
-      "liveServer.settings.donotShowInfoMsg" = true;
-      "editor.quickSuggestions" = {
-        "strings" = "on";
-      };
-      "indentRainbow.ignoreErrorLanguages" = ["*"];
-      "indentRainbow.colorOnWhiteSpaceOnly" = true;
-      "diffEditor.ignoreTrimWhitespace" = false;
-      "editor.tabSize" = 2;
-      "workbench.colorTheme" = "Codemos Modern (Dark)";
-      "terminal.integrated.inheritEnv" = true;
-      "terminal.integrated.defaultProfile.osx" = "zsh";
-      "github.copilot.nextEditSuggestions.enabled" = true;
-      "chat.tools.terminal.autoApprove" = {
-        "flutter" = true;
-        "rspec" = true;
-        "xcodebuild" = true;
-        "dart" = true;
-      };
-      "github.copilot.enable" = {
-        "*" = true;
-        "plaintext" = false;
-        "markdown" = false;
-        "scminput" = false;
-      };
-      "chat.mcp.gallery.enabled" = true;
-      "chat.viewSessions.orientation" = "stacked";
-      "claudeCode.preferredLocation" = "panel";
-      "diffEditor.hideUnchangedRegions.enabled" = true;
-    };
   };
+
+  home.file."Library/Application Support/Code/User/settings.json".source =
+    lib.mkForce (
+      config.lib.file.mkOutOfStoreSymlink
+        "${config.home.homeDirectory}/.config/nix/dotfiles/vscode-user-settings.json"
+    );
 }

@@ -47,7 +47,6 @@
     onActivation.cleanup = "zap";
 
     casks = [
-      # Put Ximmer-specific GUI apps here.
       "google-chrome"
       "orbstack"
       "maccy"
@@ -64,6 +63,9 @@
 
     masApps = {
       Xcode = 497799835;
+      Numbers = 409203825;
+      Shadowrocket = 932747118;
+      "剪映专业版" = 1529999940;
     };
   };
 }

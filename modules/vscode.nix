@@ -5,14 +5,12 @@
     enable = true;
 
     profiles.default.extensions = with pkgs.vscode-marketplace; [
-      aliariff.vscode-erb-beautify
       anthropic.claude-code
       bbenoist.nix
       codemos.codemos-modern
       dart-code.dart-code
       dart-code.flutter
       kaiqun.build-runner
-      kaiwood.endwise
       localizely.flutter-intl
       mk12.better-git-line-blame
       ms-ossdata.vscode-pgsql
@@ -22,7 +20,6 @@
       ms-python.vscode-python-envs
       oderwat.indent-rainbow
       pejmannikram.vscode-auto-scroll
-      ritwickdey.liveserver
       ms-vscode-remote.remote-containers
     ];
 

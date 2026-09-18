@@ -34,7 +34,10 @@
       "extensions": [
         "Shopify.ruby-lsp",
         "lorankloeze.ruby-rubocop-revived",
-        "bung87.rails"
+        "bung87.rails",
+        "aliariff.vscode-erb-beautify",
+        "kaiwood.endwise",
+        "ms-ossdata.vscode-pgsql"
       ],
       "settings": {
         "editor.formatOnSave": true,

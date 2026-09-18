@@ -1,0 +1,15 @@
+# Nix build outputs and local state
+result
+result-*
+.direnv/
+.nix-profile
+.nix-defexpr
+.nix-channels
+
+# macOS metadata
+.DS_Store
+
+# Editor temporary files
+*.swp
+*.swo
+*~

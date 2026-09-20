@@ -91,10 +91,10 @@
         alt-comma = "layout accordion horizontal vertical";
 
         # Focus
-        alt-h = "focus left";
-        alt-j = "focus down";
-        alt-k = "focus up";
-        alt-l = "focus right";
+        alt-left = "focus left";
+        alt-down = "focus down";
+        alt-up = "focus up";
+        alt-right = "focus right";
 
         # Move
         alt-shift-h = "move left";

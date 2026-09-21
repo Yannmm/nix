@@ -14,13 +14,10 @@
       localizely.flutter-intl
       mk12.better-git-line-blame
       ms-ossdata.vscode-pgsql
-      ms-python.debugpy
-      ms-python.python
-      ms-python.vscode-pylance
-      ms-python.vscode-python-envs
       oderwat.indent-rainbow
       pejmannikram.vscode-auto-scroll
       ms-vscode-remote.remote-containers
+      amazonwebservices.amazon-q-vscode
     ];
   };
 

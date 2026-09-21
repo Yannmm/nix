@@ -70,5 +70,9 @@
   "chat.mcp.gallery.enabled": true,
   "chat.viewSessions.orientation": "stacked",
   "claudeCode.preferredLocation": "panel",
-  "diffEditor.hideUnchangedRegions.enabled": true
+  "diffEditor.hideUnchangedRegions.enabled": true,
+  "amazonQ.suppressPrompts": {
+    "amazonQChatPairProgramming": true,
+    "amazonQChatDisclaimer": true
+  }
 }

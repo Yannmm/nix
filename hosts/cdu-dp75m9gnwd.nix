@@ -59,6 +59,7 @@
       "dbeaver-community"
       "tencent-lemon"
       "grandperspective"
+      "manico"
     ];
 
     brews = [

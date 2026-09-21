@@ -26,7 +26,29 @@
           "zh-Hans"
         ];
 
-        AppleLocale = "en_US";
+        AppleLocale = "zh_CN";
+      };
+
+      "com.apple.symbolichotkeys" = {
+        AppleSymbolicHotKeys = {
+          # ⌘ Space → Change input source
+          "60" = {
+            enabled = true;
+            value = {
+              parameters = [ 32 49 1048576 ];
+              type = "standard";
+            };
+          };
+
+          # ⌃ Space → Spotlight
+          "64" = {
+            enabled = true;
+            value = {
+              parameters = [ 32 49 524288 ];
+              type = "standard";
+            };
+          };
+        };
       };
     };
 

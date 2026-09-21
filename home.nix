@@ -9,6 +9,7 @@
     ./modules/ssh.nix
     ./modules/tmux.nix
     ./modules/nodejs.nix
+    ./modules/python.nix
   ];
 
 

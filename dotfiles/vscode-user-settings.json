@@ -71,8 +71,6 @@
   "chat.viewSessions.orientation": "stacked",
   "claudeCode.preferredLocation": "panel",
   "diffEditor.hideUnchangedRegions.enabled": true,
-  "amazonQ.suppressPrompts": {
-    "amazonQChatPairProgramming": true,
-    "amazonQChatDisclaimer": true
-  }
+  "terminal.integrated.mouseWheelScrollSensitivity": 3,
+  "terminal.integrated.gpuAcceleration": "off"
 }

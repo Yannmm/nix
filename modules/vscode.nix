@@ -17,7 +17,6 @@
       oderwat.indent-rainbow
       pejmannikram.vscode-auto-scroll
       ms-vscode-remote.remote-containers
-      amazonwebservices.amazon-q-vscode
     ];
   };
 

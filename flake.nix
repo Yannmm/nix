@@ -106,6 +106,7 @@
               imports = [
                 ./home.nix
                 ./modules/claude-code.nix
+                ./modules/kiro.nix
                 ./modules/opencode.nix
                 ./modules/vscode.nix
               ];

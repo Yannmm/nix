@@ -37,11 +37,6 @@
     profileExtra = ''
       source ~/.orbstack/shell/init.zsh 2>/dev/null || :
     '';
-
-    initContent = ''
-      # Gemini CLI
-      export GOOGLE_CLOUD_PROJECT="gen-lang-client-0567175526"
-    '';
   };
 
   home.sessionVariables = {

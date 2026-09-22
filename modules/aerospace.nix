@@ -91,10 +91,10 @@
         alt-comma = "layout accordion horizontal vertical";
 
         # Focus
-        alt-left = "focus left";
-        alt-down = "focus down";
-        alt-up = "focus up";
-        alt-right = "focus right";
+        alt-h = "focus left";
+        alt-j = "focus down";
+        alt-k = "focus up";
+        alt-l = "focus right";
 
         # Move
         alt-shift-h = "move left";
@@ -226,6 +226,14 @@
           "mode main"
         ];
       };
+
+      on-window-detected = [
+        {
+          "if".app-id = "com.liguangming.Shadowrocket";
+          run = "layout floating";
+        }
+      ];
+      
     };
   };
 }

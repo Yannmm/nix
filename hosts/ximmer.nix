@@ -55,6 +55,7 @@
       "tencent-lemon"
       "grandperspective"
       "manico"
+      "chatgpt"
     ];
 
     brews = [

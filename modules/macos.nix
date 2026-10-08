@@ -17,6 +17,9 @@
 
       # Trackpad tracking speed
       "com.apple.trackpad.scaling" = 1.2;
+
+      # Disable automatic capitalization of the first letter
+      NSAutomaticCapitalizationEnabled = false;
     };
 
     CustomUserPreferences = {

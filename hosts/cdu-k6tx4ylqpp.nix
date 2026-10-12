@@ -60,7 +60,7 @@
       "tencent-lemon"
       "grandperspective"
       "manico"
-      "jordanbaird-ice"
+      "thaw"
     ];
 
     brews = [

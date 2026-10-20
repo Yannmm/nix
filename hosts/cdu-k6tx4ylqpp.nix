@@ -61,6 +61,7 @@
       "grandperspective"
       "manico"
       "thaw"
+      "cc-switch"
     ];
 
     brews = [

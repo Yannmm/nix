@@ -64,7 +64,6 @@
                 ./home.nix
                 ./modules/claude-code.nix
                 ./modules/kiro.nix
-                ./modules/opencode.nix
                 ./modules/vscode.nix
               ];
             };
@@ -103,7 +102,6 @@
               imports = [
                 ./home.nix
                 ./modules/vscode.nix
-                ./modules/opencode.nix
               ];
             };
           }

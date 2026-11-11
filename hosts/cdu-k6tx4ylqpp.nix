@@ -63,6 +63,7 @@
       "thaw"
       "cc-switch"
       "wechatwebdevtools"
+      "dbx"
     ];
 
     brews = [

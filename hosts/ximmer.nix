@@ -56,6 +56,7 @@
       "grandperspective"
       "manico"
       "wechatwebdevtools"
+      "dbx"
     ];
 
     brews = [

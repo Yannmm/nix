@@ -79,7 +79,6 @@
           ./hosts/ximmer.nix
           ./modules/aerospace.nix
           ./modules/macos.nix
-          ./modules/rails-new.nix
 
           home-manager.darwinModules.home-manager
           {
@@ -104,6 +103,7 @@
               imports = [
                 ./home.nix
                 ./modules/vscode.nix
+                ./modules/rails-new.nix
               ];
             };
           }

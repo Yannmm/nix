@@ -61,6 +61,8 @@
       "grandperspective"
       "manico"
       "thaw"
+      "cc-switch"
+      "wechatwebdevtools"
     ];
 
     brews = [

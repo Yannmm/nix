@@ -51,11 +51,10 @@
       "orbstack"
       "maccy"
       "gitup-app"
-      "dbeaver-community"
       "tencent-lemon"
       "grandperspective"
       "manico"
-      "wechatwebdevtools"
+      # "wechatwebdevtools"
       "dbx"
     ];
 
@@ -66,7 +65,7 @@
 
     masApps = {
       Xcode = 497799835;
-      Numbers = 409203825;
+      Numbers = 361304891;
       Shadowrocket = 932747118;
       "剪映专业版" = 1529999940;
     };

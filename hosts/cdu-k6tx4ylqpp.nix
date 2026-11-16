@@ -67,6 +67,7 @@
     ];
 
     brews = [
+      "create-dmg"
       "mas"
     ];
 

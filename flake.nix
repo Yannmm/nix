@@ -64,7 +64,6 @@
                 ./home.nix
                 ./modules/claude-code.nix
                 ./modules/kiro.nix
-                ./modules/opencode.nix
                 ./modules/vscode.nix
                 ./modules/rails-new.nix
               ];
@@ -80,7 +79,6 @@
           ./hosts/ximmer.nix
           ./modules/aerospace.nix
           ./modules/macos.nix
-          ./modules/rails-new.nix
 
           home-manager.darwinModules.home-manager
           {
@@ -105,7 +103,7 @@
               imports = [
                 ./home.nix
                 ./modules/vscode.nix
-                ./modules/opencode.nix
+                ./modules/rails-new.nix
               ];
             };
           }
